@@ -1,0 +1,47 @@
+
+#header-wrapper {
+	position: relative;
+	padding: 2em 0 2em 0;
+	background-image: url("images/header.svg");
+	background-image: url("images/overlay.png"), url("images/header.svg"), -moz-linear-gradient(75deg, #1f7a8c 20%, #D3FFE9 55%);
+	background-image: url("images/overlay.png"), url("images/header.svg"), -webkit-linear-gradient(75deg, #1f7a8c 20%, #D3FFE9 55%);
+	background-image: url("images/overlay.png"), url("images/header.svg"), -ms-linear-gradient(75deg, #1f7a8c 20%, #D3FFE9 55%);
+	background-image: url("images/overlay.png"), url("images/header.svg"), linear-gradient(75deg, #1f7a8c 20%, #9EBF9E 55%);
+	background-color: #022B3A;c3dac3
+	background-size: 100% 620%;
+	background-size: 128px 128px, 100% 620%, auto;
+	background-repeat: repeat, no-repeat, no-repeat;
+}
+
+article > h3 {
+	display: block;
+	color: #022B3A;
+	padding: 0.75em 0 0 0;
+}
+
+
+header > p {
+	display: block;
+	color: #022B3A;
+	padding: 0.75em 0 0 0;
+	font-size: 1.5em;
+	line-height: 1.5em;
+}
+
+input[type="button"]:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+button:hover,
+.button:hover {
+	color: #022B3A;
+	border-color: rgba(243, 88, 88, 0.5);
+}
+
+.dropotron li.active > a, .dropotron li.active > span {
+	color: #022B3A;
+}
+
+a:hover {
+	color: #022B3A;
+	border-bottom-color: rgba(255, 255, 255, 0);
+}
