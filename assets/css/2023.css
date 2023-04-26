@@ -45,3 +45,7 @@ a:hover {
 	color: #022B3A;
 	border-bottom-color: rgba(255, 255, 255, 0);
 }
+
+a.sponsor {
+	border-bottom: none;
+}
