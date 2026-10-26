@@ -11,6 +11,16 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="../assets/css/main.css" />
 		<link rel="stylesheet" href="../assets/css/2027.css" />
+		<style>
+			#hero .subtitle { opacity: 0.9; }
+			#hero .button { margin: 0.25em; color: #632A50; }
+			#hero .button.alt { background: none; border-color: rgba(255, 255, 255, 0.6); color: #fff; }
+			.key-dates { display: flex; flex-wrap: wrap; gap: 1em; list-style: none; padding: 0; margin-bottom: 2.5em; }
+			.key-dates li { flex: 1 1 200px; padding: 1em 1.25em; background: #faf7f2; border-top: 3px solid #E9B44C; border-radius: 0.35em; }
+			.key-dates strong { display: block; color: #022B3A; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.05em; }
+			#content p { line-height: 1.8em; }
+			.contact { margin-top: 2em; padding: 1em 1.25em; border-left: 3px solid #E9B44C; background: #faf7f2; }
+		</style>
 				<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-894M95B7F6"></script>
 	</head>
@@ -41,21 +51,29 @@
 								<h2>DataEd 2027</h2>
 							</header>
 							<p>6th International Workshop on Data Systems Education: <br> Bridging education practice with education research</p>
-							<p> In conjunction with <a href="https://edbticdt2027.github.io">EDBT/ICDT 2027</a>, April 6, 2027 in Lille, France <br> (Submission Deadline: December 11, 2026)</p>
+							<p class="subtitle">In conjunction with <a href="https://edbticdt2027.github.io">EDBT/ICDT 2027</a>, April 6, 2027 in Lille, France</p>
+							<a href="submission.html" class="button">Submission info</a>
+							<a href="program.html" class="button alt">Program</a>
 						</section>
 				</div>
 
 			<!-- Features 1 -->
 				<div class="wrapper">
 					<div class="container">
-						<article id="content">							
+						<article id="content">
+							<ul class="key-dates">
+								<li><strong>Submission deadline</strong>December 11, 2026</li>
+								<li><strong>Workshop date</strong>April 6, 2027</li>
+								<li><strong>Location</strong>Lille, France</li>
+							</ul>
+
 							<h3>Focus and purpose of DataEd 2027</h3>
 
 							<p>Data systems education is foundational in a variety of programs such as computer science, data science, and information systems and science. And, indeed, data management concepts are both timely and timeless in our increasingly data-driven world.  A continual focus since the 1970’s in the database research community is the place in curricula and best practices for teaching data systems concepts. This important conversation is particularly lively in recent years given the rise of data science. There is also a long tradition in the Computer Science Education research community on investigations into how students learn data systems concepts. With the increasing focus on data in the past decade, there is renewed focus on data systems in education research. </p>
 
 							<p>Both the DB and CS Education communities, and adjacent communities, e.g., in Statistics Education,  have complementary perspectives and experiences to share with each other.   There is much to be gained by bringing the communities more closely together: to share findings, to cross-pollinate perspectives and methods, and to shed light on opportunities for mutual progress in data systems education. The DataEd workshop is a dedicated venue for these communities to come together, for presentation and discussion of data management systems education experiences and research.</p>
 
-							<p>Questions? Contact the organizers on dataedinitiative@gmail.com</p>
+							<p class="contact">Questions? Contact the organizers at <a href="mailto:dataedinitiative@gmail.com">dataedinitiative@gmail.com</a></p>
 						</article>
 					</div>
 				</div>
