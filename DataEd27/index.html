@@ -13,8 +13,10 @@
 		<link rel="stylesheet" href="../assets/css/2027.css" />
 		<style>
 			#hero .subtitle { opacity: 0.9; }
-			#hero .button { margin: 0.25em; color: #632A50; }
+			#hero .button { margin: 0.25em; color: #632A50; transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease; }
+			#hero .button:hover { background: #fff; color: #632A50; border-color: #fff; transform: translateY(-2px); box-shadow: 0 8px 18px -6px rgba(0, 0, 0, 0.35); }
 			#hero .button.alt { background: none; border-color: rgba(255, 255, 255, 0.6); color: #fff; }
+			#hero .button.alt:hover { background: #fff; border-color: #fff; color: #632A50; }
 			.key-dates { display: flex; flex-wrap: wrap; gap: 1em; list-style: none; padding: 0; margin-bottom: 2.5em; }
 			.key-dates li { flex: 1 1 200px; padding: 1em 1.25em; background: #faf7f2; border-top: 3px solid #E9B44C; border-radius: 0.35em; }
 			.key-dates strong { display: block; color: #022B3A; font-size: 0.85em; text-transform: uppercase; letter-spacing: 0.05em; }
