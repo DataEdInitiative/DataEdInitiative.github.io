@@ -11,6 +11,52 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/2027.css" />
+		<style>
+			#hero .tagline { opacity: 0.9; margin-bottom: 1.25em; }
+			#hero .button { margin: 0.25em; color: #632A50; transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease; }
+			#hero .button:hover { background: #fff; color: #632A50; border-color: #fff; transform: translateY(-2px); box-shadow: 0 8px 18px -6px rgba(0, 0, 0, 0.35); }
+			#hero .button.alt { background: none; border-color: rgba(255, 255, 255, 0.6); color: #fff; }
+			#hero .button.alt:hover { background: #fff; border-color: #fff; color: #632A50; }
+			.home-section { margin-bottom: 3em; }
+			.home-section > h3 { border-bottom: 2px solid #E9B44C; padding-bottom: 0.4em; margin-bottom: 1em; }
+			.next-event { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5em; background: #faf7f2; border-left: 5px solid #E9B44C; border-radius: 0.5em; padding: 1.75em 2em; margin-bottom: 3em; }
+			.next-event .details { flex: 1 1 300px; }
+			.next-event .label { display: block; color: #B96D40; font-size: 0.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.08em; }
+			.next-event h3 { padding-top: 0.25em; margin-bottom: 0.25em; font-weight: bold; }
+			.next-event p { margin-bottom: 0; color: #555; }
+			.next-event .deadline { margin-top: 0.5em; color: #632A50; font-weight: bold; }
+			.next-event .button { background: #632A50; color: #fff; border-color: #632A50; }
+			.next-event .button:hover { background: #fff; color: #632A50; }
+			#content p { line-height: 1.8em; }
+			.events { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1em; list-style: none; padding-left: 0; }
+			.events li { padding: 0; }
+			.events a { display: block; height: 100%; padding: 1.1em 1.25em; background: #faf7f2; border-radius: 0.5em; border-top: 3px solid #B96D40; border-bottom: none; color: inherit; transition: transform 0.25s ease, box-shadow 0.25s ease; }
+			.events a:hover { transform: translateY(-4px); box-shadow: 0 10px 20px -10px rgba(99, 42, 80, 0.5); }
+			.events .year { display: block; color: #632A50; font-size: 1.5em; font-weight: bold; }
+			.events .name { display: block; color: #022B3A; }
+			.events .where { display: block; color: #777; font-size: 0.85em; }
+			.events .wg a { border-top-color: #E9B44C; }
+			.events .special a { border-top-color: #9fb3bf; }
+			.strip { display: flex; flex-wrap: wrap; gap: 2em; }
+			.strip > div { flex: 1 1 300px; text-align: center; background: #faf7f2; border-radius: 0.5em; padding: 1.5em; }
+			.strip h4 { color: #022B3A; font-weight: bold; margin-bottom: 1em; }
+			.faces { display: flex; justify-content: center; gap: 1em; margin-bottom: 1em; }
+			.faces img { width: 80px; height: 80px; object-fit: cover; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.3); transition: transform 0.25s ease; }
+			.faces a { border-bottom: none; }
+			.faces a:hover img { transform: scale(1.1); }
+			.logos { display: flex; justify-content: center; align-items: center; gap: 2em; min-height: 80px; margin-bottom: 1em; }
+			.logos a { border-bottom: none; }
+			.logos img { max-height: 45px; max-width: 160px; filter: grayscale(100%); opacity: 0.7; transition: filter 0.3s ease, opacity 0.3s ease; }
+			.logos a:hover img { filter: none; opacity: 1; }
+			.contact { margin-top: 2em; padding: 1em 1.25em; border-left: 3px solid #E9B44C; background: #faf7f2; }
+			@media screen and (max-width: 1080px) {
+				.events { grid-template-columns: repeat(2, 1fr); }
+			}
+			@media screen and (max-width: 480px) {
+				.events { grid-template-columns: 1fr; }
+				.next-event { padding: 1.5em; }
+			}
+		</style>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-894M95B7F6"></script>
 		<script>
@@ -63,6 +109,9 @@
 							<header>
 								<h2>DataEd Initiative</h2>
 							</header>
+							<p class="tagline">Bridging data systems education practice with education research</p>
+							<a href="DataEd27/index.html" class="button">DataEd 2027</a>
+							<a href="sponsorship.html" class="button alt">Become a Sponsor</a>
 						</section>
 				</div>
 
@@ -70,15 +119,59 @@
 				<div class="wrapper">
 					<div class="container">
 						<article id="content">
-								<h3>Focus and purpose of the DataEd Initiative</h3>
+							<div class="next-event">
+								<div class="details">
+									<span class="label">Next event</span>
+									<h3>DataEd 2027 @ EDBT/ICDT</h3>
+									<p>6th International Workshop on Data Systems Education &middot; April 6, 2027 in Lille, France</p>
+									<p class="deadline">Submission deadline: December 11, 2026</p>
+								</div>
+								<a href="DataEd27/index.html" class="button">Learn more</a>
+							</div>
 
+							<section class="home-section">
+								<h3>Focus and purpose of the DataEd Initiative</h3>
 								<p>Data systems education is foundational in a variety of programs such as computer science, data science, and information systems and science. And, indeed, data management concepts are both timely and timeless in our increasingly data-driven world.  A continual focus since the 1970’s in the database research community is the place in curricula and best practices for teaching data systems concepts. This important conversation is particularly lively in recent years given the rise of data science. There is also a long tradition in the Computer Science Education research community on investigations into how students learn data systems concepts. With the increasing focus on data in the past decade, there is renewed focus on data systems in education research. </p>
 
 								<p>Both the DB and CS Education communities, and adjacent communities, e.g., in Statistics Education,  have complementary perspectives and experiences to share with each other. There is much to be gained by bringing the communities more closely together: to share findings, to cross-pollinate perspectives and methods, and to shed light on opportunities for mutual progress in data systems education. Under the DataEd Initiative umbrella, we aim to organize various events for these communities to come together, for presentation and discussion of data management systems education experiences and research.</p>
+							</section>
 
-								<p>Questions? Contact the team through dataedinitiative@gmail.com</p>
+							<section class="home-section">
+								<h3>Past events</h3>
+								<ul class="events">
+								<li><a href="DataEd26/index.html"><span class="year">2026</span><span class="name">DataEd 2026</span><span class="where">EDBT/ICDT · Tampere, Finland</span></a></li>
+								<li class="wg"><a href="WG2025/index.html"><span class="year">2025</span><span class="name">Working Group</span><span class="where">ITiCSE · Notional Machines for Databases</span></a></li>
+								<li><a href="DataEd25/index.html"><span class="year">2025</span><span class="name">DataEd 2025</span><span class="where">SIGMOD · Berlin, Germany</span></a></li>
+								<li class="wg"><a href="WG2024/index.html"><span class="year">2024</span><span class="name">Working Group</span><span class="where">ITiCSE · Analysis of Data Systems Curricula</span></a></li>
+								<li><a href="DataEd24/index.html"><span class="year">2024</span><span class="name">DataEd 2024</span><span class="where">SIGMOD · Santiago, Chile</span></a></li>
+								<li class="special"><a href="Future_Engineer/index.html"><span class="year">2024</span><span class="name">Data Education for the Future Engineer</span><span class="where">Seminar · Eindhoven, the Netherlands</span></a></li>
+								<li><a href="DataEd23/index.html"><span class="year">2023</span><span class="name">DataEd 2023</span><span class="where">SIGMOD · Seattle, WA, USA</span></a></li>
+								<li><a href="DataEd22/index.html"><span class="year">2022</span><span class="name">DataEd 2022</span><span class="where">SIGMOD · Philadelphia, PA, USA</span></a></li>
+								</ul>
+							</section>
 
-							</article>
+							<section class="home-section strip">
+								<div>
+									<h4>Meet the organizers</h4>
+									<div class="faces">
+										<a href="team.html"><img src="images/daphne.jpeg" alt="Daphne Miedema" /></a>
+										<a href="team.html"><img src="images/michael.jpeg" alt="Michael Liut" /></a>
+										<a href="team.html"><img src="images/george.jpeg" alt="George Fletcher" /></a>
+									</div>
+									<a href="team.html">See the full team</a>
+								</div>
+								<div>
+									<h4>Thank you to our sponsors</h4>
+									<div class="logos">
+										<a target="_blank" href="https://bit.ly/43cA89E"><img src="DataEd25/images/oracle.png" alt="Oracle" /></a>
+										<a target="_blank" href="http://relational.ai"><img src="DataEd23/images/rai.png" alt="RelationalAI" /></a>
+									</div>
+									<a href="sponsorship.html">Become a sponsor</a>
+								</div>
+							</section>
+
+							<p class="contact">Questions? Contact the team through <a href="mailto:dataedinitiative@gmail.com">dataedinitiative@gmail.com</a></p>
+						</article>
 					</div>
 				</div>
 
