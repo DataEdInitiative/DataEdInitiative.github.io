@@ -11,6 +11,53 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/2027.css" />
+		<style>
+			.intro { font-size: 1.15em; line-height: 1.8em; max-width: 50em; margin: 0 auto 2.5em auto; text-align: center; }
+			.tiers { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1.25em; margin-bottom: 2.5em; }
+			.tier { --tier: #c2c7cc; background: #faf7f2; border-radius: 0.5em; border-top: 5px solid var(--tier); padding: 1.75em 1.25em; margin-bottom: 0; transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease, background-color 0.3s ease; }
+			.tier:hover { transform: translateY(-8px) rotate(-0.5deg); box-shadow: 0 0 0 3px var(--tier), 0 18px 30px -10px var(--tier); background-color: #fff; }
+			.tier h3 { padding-top: 0; margin-bottom: 0.25em; font-weight: bold; }
+			.tier .price { font-size: 2em; color: #632A50; margin-bottom: 0.75em; transform-origin: left center; transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1); }
+			.tier:hover .price { transform: scale(1.12); }
+			.tier .includes { color: #777; font-size: 0.9em; margin-bottom: 0.5em; }
+			.tier ul { list-style: none; padding-left: 0; margin-bottom: 0; }
+			.tier li { padding: 0.4em 0 0.4em 1.4em; position: relative; border-bottom: 1px solid #eee5d5; }
+			.tier li:last-child { border-bottom: none; }
+			.tier li:before { content: '\2713'; position: absolute; left: 0; color: #B96D40; transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1); }
+			.tier:hover li:before { transform: scale(1.4); }
+			.tier li:nth-child(2):before { transition-delay: 0.05s; }
+			.tier li:nth-child(3):before { transition-delay: 0.1s; }
+			.tier li:nth-child(4):before { transition-delay: 0.15s; }
+			.tier li:nth-child(5):before { transition-delay: 0.2s; }
+			.tier-supporter { --tier: #9fb3bf; }
+			.tier-bronze { --tier: #B96D40; }
+			.tier-silver { --tier: #a9adb3; }
+			.tier-gold { --tier: #E9B44C; background: #fdf6e7; }
+			@media (prefers-reduced-motion: reduce) {
+				.tier, .tier .price, .tier li:before { transition: none; }
+				.tier:hover { transform: none; }
+			}
+			.tier { display: flex; flex-direction: column; }
+			.tier ul { flex-grow: 1; }
+			.tier-cta { display: block; margin-top: 1.25em; padding: 0.6em 1em; text-align: center; border: 2px solid var(--tier); border-radius: 2em; color: #632A50; font-weight: bold; transition: background-color 0.25s ease, color 0.25s ease; }
+			.tier-cta:hover, .tier:hover .tier-cta { background-color: var(--tier); color: #fff; border-bottom-color: var(--tier); }
+			.past-sponsors { text-align: center; margin-top: 3em; }
+			.past-sponsors h3 { font-weight: bold; }
+			.past-sponsors p { color: #777; }
+			.sponsor-logos { display: flex; flex-wrap: wrap; justify-content: center; align-items: center; gap: 3em; margin: 1.5em 0 2.5em 0; }
+			.sponsor-logos a { border-bottom: none; text-align: center; }
+			.sponsor-logos img { display: block; height: auto; width: auto; max-height: 60px; max-width: 220px; margin: 0 auto 0.5em auto; filter: grayscale(100%); opacity: 0.7; transition: filter 0.3s ease, opacity 0.3s ease, transform 0.3s ease; }
+			.sponsor-logos a:hover img { filter: none; opacity: 1; transform: scale(1.05); }
+			.sponsor-logos span { display: block; color: #777; font-size: 0.85em; }
+			.contact { margin-top: 2em; padding: 1em 1.25em; border-left: 3px solid #E9B44C; background: #faf7f2; }
+			@media screen and (max-width: 1280px) {
+				.tiers { grid-template-columns: repeat(2, 1fr); }
+			}
+			@media screen and (max-width: 600px) {
+				.tiers { grid-template-columns: 1fr; }
+				.intro { text-align: left; }
+			}
+		</style>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-894M95B7F6"></script>
 		<script>
@@ -70,47 +117,76 @@
 				<div class="wrapper">
 					<div class="container">
 						<article id="content">
-								<p>Your potential support of DataEd means a lot to us, as it means we can invest even more in building an strong community of data systems and education professionals who care about the impact of their work. We offer the following packages to our sponsors:</p>
+								<p class="intro">Your potential support of DataEd means a lot to us, as it means we can invest even more in building a strong community of data systems and education professionals who care about the impact of their work. We offer the following packages to our sponsors:</p>
 
-								<h3>Supporter package - €2000</h3>
+								<div class="tiers">
+								<section class="tier tier-supporter">
+								<h3>Supporter package</h3>
+								<p class="price">€2000</p>
 
-								<p>Includes:</p>
-								<ul style="padding-left: 40px;">
-									<li>Logo placement on the DataEd'26 sponsors webpage</li>
+								<p class="includes">Includes:</p>
+								<ul>
+									<li>Logo placement on the DataEd sponsors webpage</li>
 									<li>Social media mentions as part of sponsor recognition</li>
 									<li>Recognition as "Official Supporter"</li>
 								</ul>
+								<a class="tier-cta" href="mailto:dataedinitiative@gmail.com?subject=DataEd%20sponsorship%20-%20Supporter%20package">Get in touch</a>
+								</section>
 
-								<h3>Bronze package - €5000</h3>
+								<section class="tier tier-bronze">
+								<h3>Bronze package</h3>
+								<p class="price">€5000</p>
 
-								<p>Includes everything in Supporter, plus:</p>
-								<ul style="padding-left: 40px;">
+								<p class="includes">Includes everything in Supporter, plus:</p>
+								<ul>
 									<li>Logo placement on event materials (program, slides)</li>
 									<li>Verbal acknowledgement during the event</li>
 									<li>Speaking opportunity during the program (10 minutes)</li>
 									<li>Registration to the conference for one person</li>
 									<li>Inclusion in post-event recap or thank-you communication</li>
 								</ul>
+								<a class="tier-cta" href="mailto:dataedinitiative@gmail.com?subject=DataEd%20sponsorship%20-%20Bronze%20package">Get in touch</a>
+								</section>
 
-								<h3>Silver package - €10000</h3>
+								<section class="tier tier-silver">
+								<h3>Silver package</h3>
+								<p class="price">€10000</p>
 
-								<p>Includes everything in Bronze, plus:</p>
-								<ul style="padding-left: 40px;">
+								<p class="includes">Includes everything in Bronze, plus:</p>
+								<ul>
 									<li>On-site presence during the workshop with a booth or table</li>
 									<li>Dedicated social media spotlight post</li>
 									<li>Speaking opportunity during the program (20 minutes instead of 10)</li>
 								</ul>
+								<a class="tier-cta" href="mailto:dataedinitiative@gmail.com?subject=DataEd%20sponsorship%20-%20Silver%20package">Get in touch</a>
+								</section>
 
-								<h3>Gold package - €15000</h3>
+								<section class="tier tier-gold">
+								<h3>Gold package</h3>
+								<p class="price">€15000</p>
 
-								<p>Includes everything in Silver, plus: </p>
-								<ul style="padding-left: 40px;">
+								<p class="includes">Includes everything in Silver, plus: </p>
+								<ul>
 									<li>Top-tier logo placement (homepage, main stage)</li>
 									<li>Speaking opportunity during the program (30 minutes instead of 20)</li>
 									<li>Conference attendance for two people instead of one (Bronze/Silver)</li>
 									<li>Brand inclusion in photo/video content</li>
 									<li>Access to post-event performance metrics</li>
 								</ul>
+								<a class="tier-cta" href="mailto:dataedinitiative@gmail.com?subject=DataEd%20sponsorship%20-%20Gold%20package">Get in touch</a>
+								</section>
+								</div>
+
+								<section class="past-sponsors">
+								<h3>Previous sponsors</h3>
+								<p>Thank you to the organizations that have supported DataEd.</p>
+								<div class="sponsor-logos">
+									<a target="_blank" href="https://bit.ly/43cA89E"><img src="DataEd25/images/oracle.png" alt="Oracle" /><span>DataEd 2025, 2026</span></a>
+									<a target="_blank" href="http://relational.ai"><img src="DataEd23/images/rai.png" alt="RelationalAI" /><span>DataEd 2023</span></a>
+								</div>
+								</section>
+
+								<p class="contact">Questions? Contact the organizers at <a href="mailto:dataedinitiative@gmail.com">dataedinitiative@gmail.com</a></p>
 							</article>
 					</div>
 				</div>
