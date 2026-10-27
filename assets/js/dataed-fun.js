@@ -16,22 +16,6 @@
 	var lastRun = 0;
 	var layer, toast;
 
-	var css = '' +
-		'.db-egg { background: none; border: 0; padding: 0 0.25em; cursor: pointer; font-size: 1.1em; color: inherit; opacity: 0.25; transition: opacity 0.3s ease, transform 0.3s ease; }' +
-		'.db-egg:hover, .db-egg:focus { opacity: 1; transform: scale(1.3) rotate(-10deg); outline: none; }' +
-		'.db-rain { position: fixed; inset: 0; pointer-events: none; overflow: hidden; z-index: 10000; }' +
-		'.db-rain > * { position: absolute; top: 0; will-change: transform; }' +
-		'.db-rain .sym { font-size: 2em; font-weight: bold; }' +
-		'.db-rain .kw { font-family: Menlo, Consolas, monospace; font-size: 0.9em; font-weight: bold; padding: 0.15em 0.5em; border-radius: 0.3em; color: #fff; }' +
-		'.db-rain .row { width: 18px; height: 6px; border-radius: 2px; }' +
-		'.db-toast { position: fixed; right: 1.5em; bottom: 1.5em; z-index: 10001; background: #1e1a24; color: #e8e2d6; font-family: Menlo, Consolas, monospace; font-size: 0.85em; line-height: 1.6em; padding: 1em 1.25em; border-radius: 0.5em; border-top: 3px solid #E9B44C; box-shadow: 0 14px 30px -10px rgba(0, 0, 0, 0.5); max-width: calc(100vw - 3em); pointer-events: none; transition: opacity 0.4s ease, transform 0.4s ease; }' +
-		'.db-toast .prompt { color: #E9B44C; }' +
-		'.db-toast .ok { color: #8fd18f; }' +
-		'.db-toast .err { color: #f08c89; }' +
-		'.db-toast .cursor { display: inline-block; width: 0.55em; height: 1em; background: #e8e2d6; vertical-align: -0.15em; animation: db-blink 1s steps(1) infinite; }' +
-		'.db-toast.hide { opacity: 0; transform: translateY(10px); }' +
-		'@keyframes db-blink { 50% { opacity: 0; } }';
-
 	function cylinder(c) {
 		return '<svg width="40" height="48" viewBox="0 0 40 48" aria-hidden="true">' +
 			'<path d="M4 8v32c0 3.3 7.2 6 16 6s16-2.7 16-6V8" fill="' + c[0] + '"/>' +
@@ -183,10 +167,6 @@
 	}
 
 	function install() {
-		var style = document.createElement('style');
-		style.textContent = css;
-		document.head.appendChild(style);
-
 		var menu = document.querySelector('#copyright .menu');
 		if (menu) {
 			var li = document.createElement('li');

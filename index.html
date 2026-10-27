@@ -11,52 +11,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<link rel="stylesheet" href="assets/css/2027.css" />
-		<style>
-			#hero .tagline { opacity: 0.9; margin-bottom: 1.25em; }
-			#hero .button { margin: 0.25em; color: #632A50; transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease, color 0.2s ease; }
-			#hero .button:hover { background: #fff; color: #632A50; border-color: #fff; transform: translateY(-2px); box-shadow: 0 8px 18px -6px rgba(0, 0, 0, 0.35); }
-			#hero .button.alt { background: none; border-color: rgba(255, 255, 255, 0.6); color: #fff; }
-			#hero .button.alt:hover { background: #fff; border-color: #fff; color: #632A50; }
-			.home-section { margin-bottom: 3em; }
-			.home-section > h3 { border-bottom: 2px solid #E9B44C; padding-bottom: 0.4em; margin-bottom: 1em; }
-			.next-event { display: flex; flex-wrap: wrap; align-items: center; gap: 1.5em; background: #faf7f2; border-left: 5px solid #E9B44C; border-radius: 0.5em; padding: 1.75em 2em; margin-bottom: 3em; }
-			.next-event .details { flex: 1 1 300px; }
-			.next-event .label { display: block; color: #B96D40; font-size: 0.8em; font-weight: bold; text-transform: uppercase; letter-spacing: 0.08em; }
-			.next-event h3 { padding-top: 0.25em; margin-bottom: 0.25em; font-weight: bold; }
-			.next-event p { margin-bottom: 0; color: #555; }
-			.next-event .deadline { margin-top: 0.5em; color: #632A50; font-weight: bold; }
-			.next-event .button { background: #632A50; color: #fff; border-color: #632A50; }
-			.next-event .button:hover { background: #fff; color: #632A50; }
-			#content p { line-height: 1.8em; }
-			.events { display: grid; grid-template-columns: repeat(4, 1fr); gap: 1em; list-style: none; padding-left: 0; }
-			.events li { padding: 0; }
-			.events a { display: block; height: 100%; padding: 1.1em 1.25em; background: #faf7f2; border-radius: 0.5em; border-top: 3px solid #B96D40; border-bottom: none; color: inherit; transition: transform 0.25s ease, box-shadow 0.25s ease; }
-			.events a:hover { transform: translateY(-4px); box-shadow: 0 10px 20px -10px rgba(99, 42, 80, 0.5); }
-			.events .year { display: block; color: #632A50; font-size: 1.5em; font-weight: bold; }
-			.events .name { display: block; color: #022B3A; }
-			.events .where { display: block; color: #777; font-size: 0.85em; }
-			.events .wg a { border-top-color: #E9B44C; }
-			.events .special a { border-top-color: #9fb3bf; }
-			.strip { display: flex; flex-wrap: wrap; gap: 2em; }
-			.strip > div { flex: 1 1 300px; text-align: center; background: #faf7f2; border-radius: 0.5em; padding: 1.5em; }
-			.strip h4 { color: #022B3A; font-weight: bold; margin-bottom: 1em; }
-			.faces { display: flex; justify-content: center; gap: 1em; margin-bottom: 1em; }
-			.faces img { width: 80px; height: 80px; object-fit: cover; border-radius: 50%; border: 3px solid #fff; box-shadow: 0 4px 10px -4px rgba(0, 0, 0, 0.3); transition: transform 0.25s ease; }
-			.faces a { border-bottom: none; }
-			.faces a:hover img { transform: scale(1.1); }
-			.logos { display: flex; justify-content: center; align-items: center; gap: 2em; min-height: 80px; margin-bottom: 1em; }
-			.logos a { border-bottom: none; }
-			.logos img { max-height: 45px; max-width: 160px; filter: grayscale(100%); opacity: 0.7; transition: filter 0.3s ease, opacity 0.3s ease; }
-			.logos a:hover img { filter: none; opacity: 1; }
-			.contact { margin-top: 2em; padding: 1em 1.25em; border-left: 3px solid #E9B44C; background: #faf7f2; }
-			@media screen and (max-width: 1080px) {
-				.events { grid-template-columns: repeat(2, 1fr); }
-			}
-			@media screen and (max-width: 480px) {
-				.events { grid-template-columns: 1fr; }
-				.next-event { padding: 1.5em; }
-			}
-		</style>
 		<!-- Global site tag (gtag.js) - Google Analytics -->
 		<script async src="https://www.googletagmanager.com/gtag/js?id=G-894M95B7F6"></script>
 		<script>
@@ -67,7 +21,7 @@
 		  gtag('config', 'G-894M95B7F6');
 		</script>
 	</head>
-	<body class="homepage is-preload">
+	<body class="homepage page-home is-preload">
 		<div id="page-wrapper">
 
 			<!-- Header -->
@@ -161,12 +115,9 @@
 									<a href="team.html">See the full team</a>
 								</div>
 								<div>
-									<h4>Thank you to our sponsors</h4>
-									<div class="logos">
-										<a target="_blank" href="https://bit.ly/43cA89E"><img src="DataEd25/images/oracle.png" alt="Oracle" /></a>
-										<a target="_blank" href="http://relational.ai"><img src="DataEd23/images/rai.png" alt="RelationalAI" /></a>
-									</div>
-									<a href="sponsorship.html">Become a sponsor</a>
+									<h4>Become a sponsor</h4>
+									<p class="pitch">Help us build a strong community of data systems and education professionals.</p>
+									<a href="sponsorship.html" class="button">See sponsorship packages</a>
 								</div>
 							</section>
 
